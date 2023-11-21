@@ -10,7 +10,7 @@ namespace QuestionSet1
     {
         static void Main(string[] args)
         {
-            Q10();
+            Q14();
         }
 
 
@@ -155,8 +155,8 @@ namespace QuestionSet1
 
         public static void Q9()
         {
-            int Value = GetInteger("Enter the kilometer to find the mile value :");
-            double result = KiloToMiles(Value);
+            int KiloMeter = GetInteger("Enter the kilometer to find the mile value :");
+            double result = KiloToMiles(KiloMeter);
             Console.WriteLine("The mile calculation of the given number is :" + result);
         }
 
@@ -178,5 +178,72 @@ namespace QuestionSet1
             return ((celsius * 9 / 5.0) + 32); ;
         }
 
+        public static void Q11()
+        {
+            int FirstValue = GetInteger("Enter the value of the first variable :");
+            int SecondValue = GetInteger("Enter the value of the second variable :");
+            SwapTwoValues(FirstValue, SecondValue);
+        }
+
+        public static void SwapTwoValues(int a, int b)
+        {
+            int temp;
+            temp = a;
+            a = b;
+            b = temp;
+            Console.WriteLine("The values after swap");
+            Console.WriteLine("The value of the first variable:"+a);
+            Console.WriteLine("The value of the second variable:"+b);
+
+        }
+
+        public static void Q12()
+        {
+            int FirstValue = GetInteger("Enter the value of the first variable :");
+            int SecondValue = GetInteger("Enter the value of the second variable :");
+            SwapWithoutTempVar(FirstValue, SecondValue);
+        }
+
+        public static void SwapWithoutTempVar(int a, int b)
+        {
+            a = a * b;
+            b = a / b;
+            a = a / b;
+            Console.WriteLine("The values after swap");
+            Console.WriteLine("The value of the first variable:" + a);
+            Console.WriteLine("The value of the second variable:" + b);
+        }
+
+        public static void Q13()
+        {
+            int FirstValue = GetInteger("Enter the value of the first variable :");
+            int SecondValue = GetInteger("Enter the value of the second variable :");
+            SwapWithoutCausingOverflow(FirstValue, SecondValue);
+        }
+
+        public static void SwapWithoutCausingOverflow(int a, int b)
+        {
+            a = a ^ b;
+            b = a ^ b;
+            a = a ^ b;
+            Console.WriteLine("The values after swap");
+            Console.WriteLine("The value of the first variable:" + a);
+            Console.WriteLine("The value of the second variable:" + b);
+        }
+
+        public static void Q14()
+        {
+            int Starting = GetInteger("Enter the starting range for generating the random values :");
+            int End = GetInteger("Enter the ending range for generating the random values :");
+            int result = RandomValues(Starting, End);
+            Console.WriteLine("The random value is : "+result);
+        }
+
+        public static int RandomValues(int a, int b)
+        {
+            Random r = new Random();
+            int random = r.Next(a, b);
+            return random;
+        }
     }
 }
