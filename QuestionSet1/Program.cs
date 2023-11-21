@@ -127,5 +127,12 @@ namespace QuestionSet1
         {
             return a * a;
         }
+
+        public static void Q7()
+        {
+            int Value = GetInteger("Enter the value to find the square value :");
+            int result = SquareValue(Value);
+            Console.WriteLine("The square value of the given number is :" + result);
+        }
     }
 }
