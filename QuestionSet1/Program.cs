@@ -10,7 +10,7 @@ namespace QuestionSet1
     {
         static void Main(string[] args)
         {
-            Q6();
+            Q10();
         }
 
 
@@ -130,9 +130,53 @@ namespace QuestionSet1
 
         public static void Q7()
         {
-            int Value = GetInteger("Enter the value to find the square value :");
-            int result = SquareValue(Value);
-            Console.WriteLine("The square value of the given number is :" + result);
+            int Value = GetInteger("Enter the value to find the square root value :");
+            double result = SquareRootValue(Value);
+            Console.WriteLine("The square root value of the given number is :" + result);
         }
+
+        public static double SquareRootValue(int num)
+        {
+            return (Math.Sqrt(num));
+        }
+
+        public static void Q8()
+        {
+            double Breadth = GetDouble("Enter the value for breadth");
+            double Heigth = GetDouble("Enter the value for height");
+            double result = AreaOfTriangle(Breadth, Heigth);
+            Console.WriteLine("The area of the triangle is:"+result);
+        }
+
+        public static double AreaOfTriangle(double b, double h)
+        {
+            return (1 / 2.0*(b * h));
+        }
+
+        public static void Q9()
+        {
+            int Value = GetInteger("Enter the kilometer to find the mile value :");
+            double result = KiloToMiles(Value);
+            Console.WriteLine("The mile calculation of the given number is :" + result);
+        }
+
+        public static double KiloToMiles(int num)
+        {
+            double OneMile = 1.60934;
+            return (num * OneMile);
+        }
+
+        public static void Q10()
+        {
+            int Celsius = GetInteger("Enter the celsius :");
+            double result = CelsiusToFahrenheit(Celsius);
+            Console.WriteLine("The fahrenheit of the given celsius is :" + result);
+        }
+
+        public static double CelsiusToFahrenheit(int celsius)
+        {
+            return ((celsius * 9 / 5.0) + 32); ;
+        }
+
     }
 }
