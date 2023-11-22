@@ -79,9 +79,9 @@ namespace QuestionSet1
             Console.WriteLine("The volume of rectangle is:"+result);
         }
 
-        public static double VolumeOfRectangle(double l, double w, double h)
+        public static double VolumeOfRectangle(double Length, double Width, double Height)
         {
-            return l * w * h;
+            return Length * Width * Height;
         }
 
         public static void Q4()
