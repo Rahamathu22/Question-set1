@@ -10,7 +10,7 @@ namespace QuestionSet1
     {
         static void Main(string[] args)
         {
-            Q14();
+            Q16();
         }
 
 
@@ -244,6 +244,34 @@ namespace QuestionSet1
             Random r = new Random();
             int random = r.Next(a, b);
             return random;
+        }
+
+        public static void Q15()
+        {
+            int Length = GetInteger("Enter the first value");
+            int Width = GetInteger("Enter the second value");
+            int ProdResult = Product(Length, Width);
+            double result = AreaOfFieldInAcers(ProdResult);
+            Console.WriteLine(result);
+        }
+
+        public static double AreaOfFieldInAcers(int value)
+        {
+            int OneAcer = 43560;
+            double AreaInAcer = (value / OneAcer);
+            return AreaInAcer;
+        }
+
+        public static void Q16()
+        {
+            int Number = GetInteger("Enter the Number");
+            double result = SumNaturalNumbers(Number);
+            Console.WriteLine(result);
+        }
+
+        public static double SumNaturalNumbers(int num)
+        {
+            return (num * (num + 1) / 2);
         }
     }
 }
