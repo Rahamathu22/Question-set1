@@ -10,7 +10,7 @@ namespace QuestionSet1
     {
         static void Main(string[] args)
         {
-            Q16();
+            Q21();
         }
 
 
@@ -248,18 +248,18 @@ namespace QuestionSet1
 
         public static void Q15()
         {
-            int Length = GetInteger("Enter the first value");
-            int Width = GetInteger("Enter the second value");
-            int ProdResult = Product(Length, Width);
-            double result = AreaOfFieldInAcers(ProdResult);
+            double Length = GetDouble("Enter the length in field");
+            double Width = GetDouble("Enter the width in field");
+            
+            double result = AreaOfFieldInAcers(Length,Width);
             Console.WriteLine(result);
         }
 
-        public static double AreaOfFieldInAcers(int value)
+        public static double AreaOfFieldInAcers(double length,double width)
         {
             int OneAcer = 43560;
-            double AreaInAcer = (value / OneAcer);
-            return AreaInAcer;
+            
+            return (length*width/OneAcer);
         }
 
         public static void Q16()
@@ -273,5 +273,79 @@ namespace QuestionSet1
         {
             return (num * (num + 1) / 2);
         }
+
+        public static void Q17()
+        {
+            int Mark1 = GetInteger("Enter the mark in first subject :");
+            int Mark2 = GetInteger("Enter the mark in second subject :");
+            int Mark3 = GetInteger("Enter the mark in third subject :");
+            Console.WriteLine(Average(Mark1,Mark2,Mark3));
+        }
+
+        public static double Average(int a, int b, int c)
+        {
+           double total = a + b + c;
+            return (total / 3);
+        }
+
+        public static void Q18()
+        {
+            double Bill = GetDouble("Enter the bill amount: ");
+            Console.WriteLine("Your bill amount with tax:"+CalculateTip(Bill));
+        }
+
+        public static double CalculateTip(double bill)
+        {
+            return (bill+(bill * (5 / 100.0)));
+        }
+
+
+        public static void Q19()
+        {
+            double Bill = GetDouble("Enter the bill amount: ");
+            int tax = GetInteger("Enter the tax percentage:");
+            Console.WriteLine("The net amount is :"+CalculateNetAmount(Bill,tax));
+        }
+
+        public static double CalculateNetAmount(double Amount,int taxpercent)
+        {
+            double netamount = (Amount / (1 + (taxpercent / 100.0)));
+            return netamount;
+        }
+
+
+        public static void Q20()
+        {
+            double BasicPay = GetDouble("Enter the percent of basic pay: ");
+            double DA = GetDouble("Enter the percent of DA: ");
+            double TA = GetDouble("Enter the percent of TA: ");
+            Console.WriteLine("The Grosspay is :"+GrossPay(BasicPay,DA,TA));
+        }
+
+        public static double GrossPay(double basicpay, double DA, double TA)
+        {
+            
+            double da=basicpay*(DA/100.0);
+            double ta=basicpay*(TA/100.0);
+            double pf =basicpay*( 8 / 100.0);
+            double grosspay = basicpay + da + ta - pf;
+            return grosspay;
+        }
+
+        public static void Q21()
+        {
+            int Princple = GetInteger("Enter the principle amount:");
+            int NumberOfTime = GetInteger("Enter the Number of time period:");
+            double Rate = GetDouble("Enter the rate: ");
+            Console.WriteLine("The calculated simple interest is :"+SimpleInterest(Princple,NumberOfTime,Rate));
+        }
+
+        public static double SimpleInterest(int p, int n, double r)
+        {
+            double si = (p * n * r / 100.0);
+            return si;
+        }
+
+
     }
 }
