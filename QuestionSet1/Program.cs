@@ -10,7 +10,7 @@ namespace QuestionSet1
     {
         static void Main(string[] args)
         {
-            Q21();
+            Q22();
         }
 
 
@@ -279,7 +279,7 @@ namespace QuestionSet1
             int Mark1 = GetInteger("Enter the mark in first subject :");
             int Mark2 = GetInteger("Enter the mark in second subject :");
             int Mark3 = GetInteger("Enter the mark in third subject :");
-            Console.WriteLine(Average(Mark1,Mark2,Mark3));
+            Console.WriteLine(Average(Mark1, Mark2, Mark3));
         }
 
         public static double Average(int a, int b, int c)
@@ -342,8 +342,42 @@ namespace QuestionSet1
 
         public static double SimpleInterest(int p, int n, double r)
         {
-            double si = (p * n * r / 100.0);
+            double si = (p * n * (r / 100.0));
             return si;
+        }
+
+        public static void Q22()
+        {
+            int Princple = GetInteger("Enter the principle amount:");
+            int NumberOfTime = GetInteger("Enter the Number of time period:");
+            int TimeDuration = GetInteger("Enter the time duration:");
+            int Rate = GetInteger("Enter the rate:");
+            Console.WriteLine("The compound interest is:"+CompoundInterest(Princple,NumberOfTime,TimeDuration,Rate));
+        }
+
+        public static double CompoundInterest(int p, int n,int t, int r)
+        {
+            double Compoundinterest = (p * ((1 + r / n) ^ (n * t)));
+            return Compoundinterest;
+        }
+
+        public static void Q25()
+        {
+            Student();
+        }
+
+        public static void Student()
+        {
+            int RollNo = GetInteger("Enter your roll number:");
+            Console.WriteLine("Enter your name:");
+            string Name = Console.ReadLine();
+            int Mark1 = GetInteger("Enter your mark in subject1:");
+            int Mark2 = GetInteger("Enter your mark in subject2:");
+            int Mark3 = GetInteger("Enter your mark in subject3:");
+            int total = Mark1 + Mark2 + Mark3;
+            Console.WriteLine("Mark in sub1 is:{0} ,sub2 is:{1} and sub3 is:{2}",Mark1,Mark2,Mark3);
+            Console.WriteLine("Total:"+total);
+            Console.WriteLine("Avrg is:"+Average(Mark1, Mark2, Mark3));
         }
 
 
