@@ -4,3 +4,6 @@ c:\users\rahamath\documents\visual studio 2012\Projects\QuestionSet1\QuestionSet
 c:\users\rahamath\documents\visual studio 2012\Projects\QuestionSet1\QuestionSet1\obj\Debug\QuestionSet1.csprojResolveAssemblyReference.cache
 c:\users\rahamath\documents\visual studio 2012\Projects\QuestionSet1\QuestionSet1\obj\Debug\QuestionSet1.exe
 c:\users\rahamath\documents\visual studio 2012\Projects\QuestionSet1\QuestionSet1\obj\Debug\QuestionSet1.pdb
+C:\Users\AppAngadi-2\Music\Sample\Batch28\Working\Question-set1\QuestionSet1\bin\Debug\QuestionSet1.exe.config
+C:\Users\AppAngadi-2\Music\Sample\Batch28\Working\Question-set1\QuestionSet1\obj\Debug\QuestionSet1.exe
+C:\Users\AppAngadi-2\Music\Sample\Batch28\Working\Question-set1\QuestionSet1\obj\Debug\QuestionSet1.pdb
