@@ -10,7 +10,7 @@ namespace QuestionSet1
     {
         static void Main(string[] args)
         {
-            Q22();
+            Q24();
         }
 
 
@@ -360,6 +360,22 @@ namespace QuestionSet1
             double Compoundinterest = (p * ((1 + r / n) ^ (n * t)));
             return Compoundinterest;
         }
+
+        public static void Q24()
+        {
+            int Height = GetInteger("Enter your height:");
+            int Weight = GetInteger("Enter your weight:");
+            Console.WriteLine("The body mass index of the given height and weight is"+CalculateBMI(Height,Weight));
+        }
+
+        public static double CalculateBMI(int height, int weight)
+        {
+           int division = Quotient(height,weight);
+            double output = Product(division, height);
+            return output;
+        }
+
+           
 
         public static void Q25()
         {
